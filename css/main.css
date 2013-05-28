@@ -93,9 +93,109 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+@font-face {
+    font-family: 'geared_slabregular';
+    src: url('fonts/gearedslab-webfont.eot');
+    src: url('fonts/gearedslab-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gearedslab-webfont.woff') format('woff'),
+         url('fonts/gearedslab-webfont.ttf') format('truetype'),
+         url('fonts/gearedslab-webfont.svg#geared_slabregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
 
+html{
+    height: 100%;
+    min-height: 100%;
+    font-size: 62.5%;
+}
 
+body{
+    min-height: 100%;
+    position: relative;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body.homepage{
+    background-image: url('img/bg_home_borderlands.jpg');
+    background-size: cover;
+    text-align:center;
+}
+
+body.homepage > div{
+    width: 100%;
+    height: 100%;
+    background-color: #1e0482;
+    opacity: .5;
+    position: absolute;
+}
+
+body.homepage > section{
+    margin-top: 10%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    z-index: 2;
+    position: relative;
+}
+
+body.homepage > section > h1{
+    display: table;
+    margin: 0 auto;
+    font-size: 6rem;
+    font-family: 'geared_slabregular';
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFF;
+    background-image: url('img/logo_steampack.png');
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    padding-top: 18rem;
+    text-shadow: 0 0 .6rem #000;
+}
+
+body.homepage > section > h2{
+    margin-top: 2rem;
+    font-size: 3.2rem;
+    text-align: center;
+    color: #FFF;
+    text-shadow: 0 .1rem 1rem #000;
+}
+
+body.homepage > section > a{
+    display: table;
+    margin: 5rem auto 0;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 1.5rem;
+    font-size: 2.2rem;
+    text-shadow: 0 1px 0 #698112;
+    color: #FFF;
+    background-color: #87ab05;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.4), rgba(255,255,255,0));
+    border-top: 1px solid #c9ff08;
+    border-bottom: 2px solid #698112;
+    border-radius: 3px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+body.homepage > section > a:hover{
+    background-image: linear-gradient(to top, rgba(255,255,255,0.4), rgba(255,255,255,0));
+}
+
+body.homepage > section > a:before{
+    content: "";
+    display: inline-block;
+    float: left;
+    width: 62px;
+    height: 30px;
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    background-image: url('img/logo_steam_small.png');
+}
 
 
 
