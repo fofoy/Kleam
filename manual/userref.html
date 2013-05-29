@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Fat-Free Framework: User Reference</title>
+		<link rel="stylesheet" href="manual/css/reset.css" type="text/css" />
+		<link rel="stylesheet" href="manual/css/typography.css" type="text/css" />
+		<link rel="stylesheet" href="manual/css/ref.css" type="text/css" />
+	</head>
+	<body>
+		<div id="markdown"><?php echo htmlspecialchars(file_get_contents('manual/readme.md')); ?></div>
+		<script type="text/javascript" src="manual/js/showdown.js"></script>
+		<script type="text/javascript">
+			var e=document.getElementById('markdown');
+			e.innerHTML=(new Showdown.converter()).makeHtml(e.textContent);
+		</script>
+	</body>
+</html>
