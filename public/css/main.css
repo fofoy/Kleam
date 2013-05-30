@@ -163,7 +163,7 @@ body.homepage > section > h2{
     text-shadow: 0 .1rem 1rem #000;
 }
 
-body.homepage > section > a{
+body.homepage > section > form > button{
     display: table;
     margin: 5rem auto 0;
     height: 50px;
@@ -180,17 +180,18 @@ body.homepage > section > a{
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
+    cursor: pointer;
 }
 
-body.homepage > section > a:hover{
+body.homepage > section > form > button:hover{
     background-image: none;
 }
 
-body.homepage > section > a:active{
+body.homepage > section > form > button:active{
     background-image: linear-gradient(to top, rgba(255,255,255,0.4), rgba(255,255,255,0));
 }
 
-body.homepage > section > a:before{
+body.homepage > section > form > button:before{
     content: "";
     display: inline-block;
     float: left;
