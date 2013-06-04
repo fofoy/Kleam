@@ -44,6 +44,9 @@ class App_controller{
             F3::reroute('/');
         }
     }
+    function test(){
+        echo Views::instance()->render('test_d3.html');
+    }
 
     function __destruct(){
 
