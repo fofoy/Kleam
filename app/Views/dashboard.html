@@ -1,44 +1,29 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <base href="<?php echo $BASE; ?>/" />
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-        <link rel="stylesheet" href="public/css/reset.css">
-        <link rel="stylesheet" href="public/css/main.css">
-        <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
-        <script src="public/js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body class="homepage">
+<?php include('partials/header.html'); ?>
+    <body class="dashboard">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-        <div></div>
-        <section>
-            <h1>SteamPack</h1>
-            <h2>Welcome biatch !</h2>
+        <header>
+            <div class="wrapper">
+                <img src="public/images/fc3.jpg">
+                <h1>Your account summary</h1>
+            </div>
+        </header>
+        <section class="wrapper">
+            <h2>Hi, Fofoy</h2>
+            <img src="public/images/user.jpg" alt="">
+            <span>You have played a total of 2 months, 4 weeks, 3 days and 20 hours. <br>Guess what? That’s the time it takes to build a house.</span>
+            <ul>
+                <li>2001<p>You joined</p></li>
+                <li>16<p>Games owned</p></li>
+                <li>10<p>Played games</p></li>
+                <li>25<p>Friends</p></li>
+                <li>1080<p>Achievements</p></li>
+            </ul>
+            <section>
+                <a href="#">See your Steam Score<span>And view the points you have</span></a>
+                <span>or</span>
+                <a href="#">See your friends map<span>And compare your stats with them</span></a>
+            </section>
         </section>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="public/js/plugins.js"></script>
-        <script src="public/js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
-</html>
+<?php include('partials/footer.html'); ?>
