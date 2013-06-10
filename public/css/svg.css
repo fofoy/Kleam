@@ -1,3 +1,4 @@
-.big_pie, .mid_pie, .small_pie{display:block;margin:0 auto;margin-top:100px;}
-.mid_pie {margin-top:-450px;}
-.small_pie {margin-top:-350px;}
+.big_pie, .mid_pie, .small_pie{display:block;margin:0 auto;}
+.small_pie {margin-top:300px;}
+.mid_pie {margin-top:-300px;}
+.big_pie{margin-top:-500px;}

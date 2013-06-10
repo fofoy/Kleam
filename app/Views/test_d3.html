@@ -26,32 +26,56 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         
-        <section>
+        <section id="donuts">
         </section>
 <script>
 
 /* code très sale ne pas regarder */
-var mwidth = 400,
+var swidth = 200,
+    sheight = 200,
+    sradius = Math.min(swidth, sheight) / 2,
+    mwidth = 400,
     mheight = 400,
     mradius = Math.min(mwidth, mheight) / 2,
-    swidth = 300,
-    sheight = 300,
-    sradius = Math.min(swidth, sheight) / 2,
-    bwidth = 500,
-    bheight = 500,
+    bwidth = 600,
+    bheight = 600,
     bradius = Math.min(bwidth, bheight) / 2;
 
 var color = d3.scale.category10();
 
+var spie = d3.layout.pie()
+    .value(function(d) { return d.achievements; })
+    .sort(null);
+var mpie = d3.layout.pie()
+    .value(function(d) { return d.games; })
+    .sort(null);
 var bpie = d3.layout.pie()
     .value(function(d) { return d.hours; })
     .sort(null);
 
+var sarc = d3.svg.arc()
+    .innerRadius(sradius - 40)
+    .outerRadius(sradius - 0);
+var marc = d3.svg.arc()
+    .innerRadius(mradius - 40)
+    .outerRadius(mradius - 0);
 var barc = d3.svg.arc()
-    .innerRadius(bradius - 30)
+    .innerRadius(bradius - 40)
     .outerRadius(bradius - 0);
 
-var bsvg = d3.select("body").append("svg")
+var ssvg = d3.select("body>section").append("svg")
+    .attr("width", swidth)
+    .attr("height", sheight)
+    .attr("class", "small_pie")
+  .append("g")
+    .attr("transform", "translate(" + swidth / 2 + "," + sheight / 2 + ")");
+var msvg = d3.select("body>section  ").append("svg")
+    .attr("width", mwidth)
+    .attr("height", mheight)
+    .attr("class", "mid_pie")
+  .append("g")
+    .attr("transform", "translate(" + mwidth / 2 + "," + mheight / 2 + ")");
+var bsvg = d3.select("body>section").append("svg")
     .attr("width", bwidth)
     .attr("height", bheight)
     .attr("class", "big_pie")
@@ -75,21 +99,6 @@ d3.csv("http://localhost/kleam/public/data.tsv", function(error, data) {
       });
 });
 
-var mpie = d3.layout.pie()
-    .value(function(d) { return d.games; })
-    .sort(null);
-
-var marc = d3.svg.arc()
-    .innerRadius(mradius - 30)
-    .outerRadius(mradius - 0);
-
-var msvg = d3.select("body").append("svg")
-    .attr("width", mwidth)
-    .attr("height", mheight)
-    .attr("class", "mid_pie")
-  .append("g")
-    .attr("transform", "translate(" + mwidth / 2 + "," + mheight / 2 + ")");
-
 d3.csv("http://localhost/kleam/public/data.tsv", function(error, data) {
   var mpath = msvg.datum(data)
       .selectAll("path")
@@ -107,21 +116,6 @@ d3.csv("http://localhost/kleam/public/data.tsv", function(error, data) {
         $('.'+curr).css('opacity','1');
       });
 });
-
-var spie = d3.layout.pie()
-    .value(function(d) { return d.achievements; })
-    .sort(null);
-
-var sarc = d3.svg.arc()
-    .innerRadius(sradius - 30)
-    .outerRadius(sradius - 0);
-
-var ssvg = d3.select("body").append("svg")
-    .attr("width", swidth)
-    .attr("height", sheight)
-    .attr("class", "small_pie")
-  .append("g")
-    .attr("transform", "translate(" + swidth / 2 + "," + sheight / 2 + ")");
 
 d3.csv("http://localhost/kleam/public/data.tsv", function(error, data) {
   var spath = ssvg.datum(data)
