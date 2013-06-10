@@ -15,9 +15,11 @@
 
         <link rel="stylesheet" href="public/css/reset.css">
         <link rel="stylesheet" href="public/css/main.css">
+        <link rel="stylesheet" href="public/css/svg.css">
         <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
         <script src="public/js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
     </head>
     <body class="d3">
         <!--[if lt IE 7]>
@@ -25,73 +27,120 @@
         <![endif]-->
         
         <section>
-            <form>
-              <label><input type="radio" name="dataset" value="apples" checked> Apples</label>
-              <label><input type="radio" name="dataset" value="oranges"> Oranges</label>
-            </form>
         </section>
 <script>
 
-var width = 500,
-    height = 700,
-    radius = Math.min(width, height) / 2;
+/* code très sale ne pas regarder */
+var mwidth = 400,
+    mheight = 400,
+    mradius = Math.min(mwidth, mheight) / 2,
+    swidth = 300,
+    sheight = 300,
+    sradius = Math.min(swidth, sheight) / 2,
+    bwidth = 500,
+    bheight = 500,
+    bradius = Math.min(bwidth, bheight) / 2;
 
-var color = d3.scale.category20();
+var color = d3.scale.category10();
 
-var pie = d3.layout.pie()
-    .value(function(d) { return d.apples; })
+var bpie = d3.layout.pie()
+    .value(function(d) { return d.hours; })
     .sort(null);
 
-var arc = d3.svg.arc()
-    .innerRadius(radius - 100)
-    .outerRadius(radius - 20);
+var barc = d3.svg.arc()
+    .innerRadius(bradius - 30)
+    .outerRadius(bradius - 0);
 
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height)
+var bsvg = d3.select("body").append("svg")
+    .attr("width", bwidth)
+    .attr("height", bheight)
+    .attr("class", "big_pie")
   .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    .attr("transform", "translate(" + bwidth / 2 + "," + bheight / 2 + ")");
 
-d3.tsv("http://localhost/kleam/public/data.tsv", type, function(error, data) {
-  var path = svg.datum(data).selectAll("path")
-      .data(pie)
-    .enter().append("path")
+d3.csv("http://localhost/kleam/public/data.tsv", function(error, data) {
+  var bpath = bsvg.datum(data)
+      .selectAll("path")
+      .data(bpie)
+      .enter().append("path")
       .attr("fill", function(d, i) { return color(i); })
-      .attr("d", arc)
-      .each(function(d) { this._current = d; }); // store the initial angles
-
-  d3.selectAll("input")
-      .on("change", change);
-
-  var timeout = setTimeout(function() {
-    d3.select("input[value=\"oranges\"]").property("checked", true).each(change);
-  }, 2000);
-
-  function change() {
-    var value = this.value;
-    clearTimeout(timeout);
-    pie.value(function(d) { return d[value]; }); // change the value function
-    path = path.data(pie); // compute the new angles
-    path.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
-  }
+      .attr("d", barc)
+      .attr("class", function(d, i) { return "gamer_"+i }).on('mouseenter', function player_in(){
+        var  curr = $(this).attr('class');
+        $('.'+curr).css('opacity','0.5');
+      })
+      .on('mouseleave', function player_out(){
+        var  curr = $(this).attr('class');
+        $('.'+curr).css('opacity','1');
+      });
 });
 
-function type(d) {
-  d.apples = +d.apples;
-  d.oranges = +d.oranges;
-  return d;
-}
+var mpie = d3.layout.pie()
+    .value(function(d) { return d.games; })
+    .sort(null);
 
-// Store the displayed angles in _current.
-// Then, interpolate from _current to the new angles.
-// During the transition, _current is updated in-place by d3.interpolate.
-function arcTween(a) {
-  var i = d3.interpolate(this._current, a);
-  this._current = i(0);
-  return function(t) {
-    return arc(i(t));
-  };
-}
+var marc = d3.svg.arc()
+    .innerRadius(mradius - 30)
+    .outerRadius(mradius - 0);
+
+var msvg = d3.select("body").append("svg")
+    .attr("width", mwidth)
+    .attr("height", mheight)
+    .attr("class", "mid_pie")
+  .append("g")
+    .attr("transform", "translate(" + mwidth / 2 + "," + mheight / 2 + ")");
+
+d3.csv("http://localhost/kleam/public/data.tsv", function(error, data) {
+  var mpath = msvg.datum(data)
+      .selectAll("path")
+      .data(mpie)
+      .enter().append("path")
+      .attr("fill", function(d, i) { return color(i); })
+      .attr("d", marc)
+      .attr("class", function(d, i) { return "gamer_"+i })
+      .on('mouseenter', function player_in(){
+        var  curr = $(this).attr('class');
+        $('.'+curr).css('opacity','0.5');
+      })
+      .on('mouseleave', function player_out(){
+        var  curr = $(this).attr('class');
+        $('.'+curr).css('opacity','1');
+      });
+});
+
+var spie = d3.layout.pie()
+    .value(function(d) { return d.achievements; })
+    .sort(null);
+
+var sarc = d3.svg.arc()
+    .innerRadius(sradius - 30)
+    .outerRadius(sradius - 0);
+
+var ssvg = d3.select("body").append("svg")
+    .attr("width", swidth)
+    .attr("height", sheight)
+    .attr("class", "small_pie")
+  .append("g")
+    .attr("transform", "translate(" + swidth / 2 + "," + sheight / 2 + ")");
+
+d3.csv("http://localhost/kleam/public/data.tsv", function(error, data) {
+  var spath = ssvg.datum(data)
+      .selectAll("path")
+      .data(spie)
+      .enter().append("path")
+      .attr("fill", function(d, i) { return color(i); })
+      .attr("d", sarc)
+      .attr("class", function(d, i) { return "gamer_"+i })
+      .on('mouseenter', function player_in(){
+        var  curr = $(this).attr('class');
+        $('.'+curr).css('opacity','0.5');
+      })
+      .on('mouseleave', function player_out(){
+        var  curr = $(this).attr('class');
+        $('.'+curr).css('opacity','1');
+      });
+});
+
 
 </script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

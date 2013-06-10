@@ -1,0 +1,12 @@
+{
+    "valuecase": {
+    "hours": [
+        {"label": "label", "value":5},
+        {"label": "label", "value":13}
+    ],
+    "achievements": [
+        {"label": "label", "value":5},
+        {"label": "label", "value":13}
+    ]
+}
+}
