@@ -26,4 +26,11 @@
                 <a href="#">See your friends map<span>And compare your stats with them</span></a>
             </section>
         </section>
+
+<script>
+    $.getJSON('public/player.json', function(data) {
+        $('section > h2').text("Hi, "+data.response.players[0].personaname);
+        $('section > img').attr("src", data.response.players[0].avatarfull)
+    });
+</script>
 <?php include('partials/footer.html'); ?>

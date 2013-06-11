@@ -37,6 +37,9 @@ class App_controller{
     function test(){
         echo Views::instance()->render('test_d3.html');
     }
+    function map(){
+        echo Views::instance()->render('map.html');
+    }
 
     function done(){
         $openid=new OpenID;
