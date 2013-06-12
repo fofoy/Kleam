@@ -31,7 +31,7 @@
         </section>
         <section class="scoreboard">
             <h2>Scoreboard</h2>
-            <ul class="players">
+            <ul id="players">
                 <li>Skully</li>
                 <li>Fofoy</li>
                 <li>Réré</li>
@@ -56,7 +56,7 @@
                     <p>Skully</p>
                 </div>
                 <div>
-                    <p>0 pts</p>
+                    <p>7 pts</p>
                     <img src="" alt="">
                     <div>
                         <p>3</p>
@@ -67,15 +67,43 @@
         </section>
         <section class="details">
              <h2>Details</h2>
-             <div>
+             <div class="player_details">
                  <p>Skully</p>
                  <p>2020h Played</p>
                  <p>190 Games</p>
                  <p>1000 Achievements</p>
              </div>
         </section>
+        <section class="score_game">
+             <h2>Score per owned game</h2>
+        </section>
 <script>
-    $('body > section').height($(window).height());
+    $('body > section').css('min-height',$(window).height());
+
+    var hPlayers = $('#players').offset().top;
+    function fixDiv() {
+        var $cache = $('#players'); 
+        if ($(window).scrollTop() > hPlayers) 
+            $cache.css({'position': 'fixed', 'top': '0'}); 
+        else
+            $cache.css({'position': 'absolute', 'top': '0'});
+        }
+    $(window).scroll(fixDiv);
+    fixDiv();
+
+    var hScoreboard = $('section.scoreboard').offset().top;
+    function podium(){
+        if ($(window).scrollTop() > hScoreboard - 200) {
+            $('section.scoreboard > div > div:first-child > div').height(70);
+            $('section.scoreboard > div > div:nth-child(2) > div').height(110);
+            $('section.scoreboard > div > div:last-child > div').height(50);
+        }
+    }
+    $(window).scroll(podium);
+
+    $('section.scoreboard > div > div > div').height(0);
+    $('.player_details').hide();
+
     $.getJSON('public/player.json', function(data) {
         $('section > section > h2').text("Hi, "+data.response.players[0].personaname);
         $('section > section > img').attr("src", data.response.players[0].avatarfull);
@@ -127,14 +155,13 @@ var msvg = d3.select("body>section.details  ").append("svg")
     .attr("class", "mid_pie")
   .append("g")
     .attr("transform", "translate(" + mwidth / 2 + "," + mheight / 2 + ")");
-
-
 var ssvg = d3.select("body>section.details").append("svg")
     .attr("width", swidth)
     .attr("height", sheight)
     .attr("class", "small_pie")
   .append("g")
     .attr("transform", "translate(" + swidth / 2 + "," + sheight / 2 + ")");
+
 d3.csv("http://localhost/kleam/public/data.tsv", function(error, data) {
   var bpath = bsvg.datum(data)
       .selectAll("path")
@@ -145,10 +172,12 @@ d3.csv("http://localhost/kleam/public/data.tsv", function(error, data) {
       .attr("class", function(d, i) { return "gamer_"+i }).on('mouseenter', function player_in(){
         var  curr = $(this).attr('class');
         $('.'+curr).css('opacity','0.5');
+        $('.player_details').show();
       })
       .on('mouseleave', function player_out(){
         var  curr = $(this).attr('class');
         $('.'+curr).css('opacity','1');
+        $('.player_details').hide();
       });
 });
 
@@ -163,10 +192,12 @@ d3.csv("http://localhost/kleam/public/data.tsv", function(error, data) {
       .on('mouseenter', function player_in(){
         var  curr = $(this).attr('class');
         $('.'+curr).css('opacity','0.5');
+        $('.player_details').show();
       })
       .on('mouseleave', function player_out(){
         var  curr = $(this).attr('class');
         $('.'+curr).css('opacity','1');
+        $('.player_details').hide();
       });
 });
 
@@ -181,10 +212,12 @@ d3.csv("http://localhost/kleam/public/data.tsv", function(error, data) {
       .on('mouseenter', function player_in(){
         var  curr = $(this).attr('class');
         $('.'+curr).css('opacity','0.5');
+        $('.player_details').show();
       })
       .on('mouseleave', function player_out(){
         var  curr = $(this).attr('class');
         $('.'+curr).css('opacity','1');
+        $('.player_details').hide();
       });
 });
 </script>
