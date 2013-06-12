@@ -18,7 +18,7 @@ var W = window.innerWidth, H = window.innerHeight;
 canvas.width = W;
 canvas.height = H;
 
-var max = 100;
+var max = 20;
 var cubes = [];
 
 function clear(){
@@ -35,17 +35,15 @@ canvas.onclick = function (){
 }
 
 function createCube(){
-	this.x = Math.random() * W;
-	this.y = Math.random() * H;
-	this.vx = -1 + (Math.random()*2);
-	this.vy = -1 + (Math.random()*2);
+	this.x = Math.random() * (W/2) + (W/4);
+	this.y = Math.random() * (H/1.5) + (H/6);
 	this.w = Math.random() * 10;
 	this.h = Math.random() * 10;
 
 	this.draw = function() {
-		ctx.fillStyle = "rgb(200,0,0)";
+		ctx.fillStyle = "rgb(255,255,255)";
   		ctx.beginPath();
-  		ctx.arc(this.x, this.y, 5, 0, 2 * Math.PI, false);
+  		ctx.arc(this.x, this.y, 25, 0, 2 * Math.PI, false);
   		ctx.fill();
 	}
 }
@@ -67,9 +65,8 @@ function draw(){
 	for (var i = 0; i < cubes.length; i++) {
 		c = cubes[i];
 
-		c.x+= c.vx;
-		c.y+=  c.vy;
-
+		/*c.x+= c.vx;
+		c.y+=  c.vy;*/
 
 		c.draw();
 	};

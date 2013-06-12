@@ -3,34 +3,69 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-        <header>
-            <div class="wrapper">
-                <img src="public/images/fc3.jpg">
-                <h1>Your account summary</h1>
-            </div>
-        </header>
-        <section class="wrapper">
-            <h2>Hi, Fofoy</h2>
-            <img src="public/images/user.jpg" alt="">
-            <span>You have played a total of 2 months, 4 weeks, 3 days and 20 hours. <br>Guess what? That’s the time it takes to build a house.</span>
-            <ul>
-                <li>2001<p>You joined</p></li>
-                <li>16<p>Games owned</p></li>
-                <li>10<p>Played games</p></li>
-                <li>25<p>Friends</p></li>
-                <li>1080<p>Achievements</p></li>
-            </ul>
-            <section>
-                <a href="#">See your Steam Score<span>And view the points you have</span></a>
-                <span>or</span>
-                <a href="#">See your friends map<span>And compare your stats with them</span></a>
+        <section class="summary">
+            <header>
+                <div class="wrapper">
+                    <img src="public/images/fc3.jpg">
+                    <h1>Your account summary</h1>
+                </div>
+            </header>
+            <section class="wrapper">
+                <h2>Hi, Fofoy</h2>
+                <img src="public/images/user.jpg" alt="">
+                <span>You have played a total of 2 months, 4 weeks, 3 days and 20 hours. <br>Guess what? That’s the time it takes to build a house.</span>
+                <ul>
+                    <li>2001<p>You joined</p></li>
+                    <li>16<p>Games owned</p></li>
+                    <li>10<p>Played games</p></li>
+                    <li>25<p>Friends</p></li>
+                    <li>1080<p>Achievements</p></li>
+                </ul>
+                <section>
+                    <a href="#scoreboard">See your Steam Score<span>And view the points you have</span></a>
+                    <span>or</span>
+                    <a href="#scoreboard">See your friends map<span>And compare your stats with them</span></a>
+                </section>
             </section>
         </section>
-
+        <section class="scoreboard wrapper">
+            <h2>Scoreboard</h2>
+            <div>
+                <div>
+                    <p>4030 pts</p>
+                    <img src="" alt="">
+                    <div>
+                        <p>2</p>
+                    </div>
+                    <p>Fofoy</p>
+                </div>
+                <div>
+                    <p>9999 pts</p>
+                    <img src="" alt="">
+                    <div>
+                        <p>1</p>
+                    </div>
+                    <p>Skully</p>
+                </div>
+                <div>
+                    <p>0 pts</p>
+                    <img src="" alt="">
+                    <div>
+                        <p>3</p>
+                    </div>
+                    <p>Réré</p>
+                </div>
+            </div>
+        </section>
+        <section class="details wrapper">
+             <h2>Details</h2>
+        </section>
 <script>
+    $('body > section').height($(window).height());
     $.getJSON('public/player.json', function(data) {
-        $('section > h2').text("Hi, "+data.response.players[0].personaname);
-        $('section > img').attr("src", data.response.players[0].avatarfull)
+        $('section > section > h2').text("Hi, "+data.response.players[0].personaname);
+        $('section > section > img').attr("src", data.response.players[0].avatarfull);
+        $('section.scoreboard > div > div > img').attr("src", data.response.players[0].avatarfull);
     });
 </script>
 <?php include('partials/footer.html'); ?>
