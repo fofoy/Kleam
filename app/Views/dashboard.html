@@ -1,4 +1,5 @@
 <?php include('partials/header.html'); ?>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <body class="dashboard">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -28,8 +29,15 @@
                 </section>
             </section>
         </section>
-        <section class="scoreboard wrapper">
+        <section class="scoreboard">
             <h2>Scoreboard</h2>
+            <ul class="players">
+                <li>Skully</li>
+                <li>Fofoy</li>
+                <li>Réré</li>
+                <li>Eshra</li>
+                <li>Mush</li>
+            </ul>
             <div>
                 <div>
                     <p>4030 pts</p>
@@ -40,7 +48,7 @@
                     <p>Fofoy</p>
                 </div>
                 <div>
-                    <p>9999 pts</p>
+                    <p class="score">9999 pts</p>
                     <img src="" alt="">
                     <div>
                         <p>1</p>
@@ -57,8 +65,14 @@
                 </div>
             </div>
         </section>
-        <section class="details wrapper">
+        <section class="details">
              <h2>Details</h2>
+             <div>
+                 <p>Skully</p>
+                 <p>2020h Played</p>
+                 <p>190 Games</p>
+                 <p>1000 Achievements</p>
+             </div>
         </section>
 <script>
     $('body > section').height($(window).height());
@@ -67,5 +81,111 @@
         $('section > section > img').attr("src", data.response.players[0].avatarfull);
         $('section.scoreboard > div > div > img').attr("src", data.response.players[0].avatarfull);
     });
+    /* code très sale ne pas regarder */
+var swidth = 200,
+    sheight = 200,
+    sradius = Math.min(swidth, sheight) / 2,
+    mwidth = 400,
+    mheight = 400,
+    mradius = Math.min(mwidth, mheight) / 2,
+    bwidth = 600,
+    bheight = 600,
+    bradius = Math.min(bwidth, bheight) / 2;
+
+var color = d3.scale.category10();
+
+var spie = d3.layout.pie()
+    .value(function(d) { return d.achievements; })
+    .sort(null);
+var mpie = d3.layout.pie()
+    .value(function(d) { return d.games; })
+    .sort(null);
+var bpie = d3.layout.pie()
+    .value(function(d) { return d.hours; })
+    .sort(null);
+
+var sarc = d3.svg.arc()
+    .innerRadius(sradius - 40)
+    .outerRadius(sradius - 0);
+var marc = d3.svg.arc()
+    .innerRadius(mradius - 40)
+    .outerRadius(mradius - 0);
+var barc = d3.svg.arc()
+    .innerRadius(bradius - 40)
+    .outerRadius(bradius - 0);
+
+
+var bsvg = d3.select("body>section.details").append("svg")
+    .attr("width", bwidth)
+    .attr("height", bheight)
+    .attr("class", "big_pie")
+  .append("g")
+    .attr("transform", "translate(" + bwidth / 2 + "," + bheight / 2 + ")");
+var msvg = d3.select("body>section.details  ").append("svg")
+    .attr("width", mwidth)
+    .attr("height", mheight)
+    .attr("class", "mid_pie")
+  .append("g")
+    .attr("transform", "translate(" + mwidth / 2 + "," + mheight / 2 + ")");
+
+
+var ssvg = d3.select("body>section.details").append("svg")
+    .attr("width", swidth)
+    .attr("height", sheight)
+    .attr("class", "small_pie")
+  .append("g")
+    .attr("transform", "translate(" + swidth / 2 + "," + sheight / 2 + ")");
+d3.csv("http://localhost/kleam/public/data.tsv", function(error, data) {
+  var bpath = bsvg.datum(data)
+      .selectAll("path")
+      .data(bpie)
+      .enter().append("path")
+      .attr("fill", function(d, i) { return color(i); })
+      .attr("d", barc)
+      .attr("class", function(d, i) { return "gamer_"+i }).on('mouseenter', function player_in(){
+        var  curr = $(this).attr('class');
+        $('.'+curr).css('opacity','0.5');
+      })
+      .on('mouseleave', function player_out(){
+        var  curr = $(this).attr('class');
+        $('.'+curr).css('opacity','1');
+      });
+});
+
+d3.csv("http://localhost/kleam/public/data.tsv", function(error, data) {
+  var mpath = msvg.datum(data)
+      .selectAll("path")
+      .data(mpie)
+      .enter().append("path")
+      .attr("fill", function(d, i) { return color(i); })
+      .attr("d", marc)
+      .attr("class", function(d, i) { return "gamer_"+i })
+      .on('mouseenter', function player_in(){
+        var  curr = $(this).attr('class');
+        $('.'+curr).css('opacity','0.5');
+      })
+      .on('mouseleave', function player_out(){
+        var  curr = $(this).attr('class');
+        $('.'+curr).css('opacity','1');
+      });
+});
+
+d3.csv("http://localhost/kleam/public/data.tsv", function(error, data) {
+  var spath = ssvg.datum(data)
+      .selectAll("path")
+      .data(spie)
+      .enter().append("path")
+      .attr("fill", function(d, i) { return color(i); })
+      .attr("d", sarc)
+      .attr("class", function(d, i) { return "gamer_"+i })
+      .on('mouseenter', function player_in(){
+        var  curr = $(this).attr('class');
+        $('.'+curr).css('opacity','0.5');
+      })
+      .on('mouseleave', function player_out(){
+        var  curr = $(this).attr('class');
+        $('.'+curr).css('opacity','1');
+      });
+});
 </script>
 <?php include('partials/footer.html'); ?>

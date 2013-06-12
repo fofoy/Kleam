@@ -247,8 +247,9 @@ body.dashboard > section > header > div > img{
     top: 0;
     left: 0;
 }
-body.dashboard > section > section {
-
+body.dashboard > section {
+    font-size: 0;
+    position: relative;
 }
 body.dashboard > section > section h2{
     color: #333333;
@@ -354,12 +355,17 @@ body.dashboard > section > section > section > a + span{
     position: relative;
     top: -20px;
 }
-body.dashboard > section{
-    
+
+
+
+
+
+body.dashboard > section.scoreboard{
+    margin:150px 0 0 0;
 }
 body.dashboard > section > h2{
     display:block;
-    margin:50px auto 0;
+    margin:0 auto;
     text-align: center;
     height: 70px;
     line-height: 70px;
@@ -369,7 +375,11 @@ body.dashboard > section > h2{
     text-transform: uppercase;
     color: #333333;
     border-bottom:1px solid #999999;
+    padding:50px 0 0 0;
 }
+
+
+
 
 .scoreboard > div {
     width:690px;
@@ -387,7 +397,6 @@ body.dashboard > section > h2{
 .scoreboard > div > div > p{
     font-size:3.6rem;
 }
-
 .scoreboard > div > div:first-child > p{
     color:#a8d507;
 }
@@ -439,13 +448,28 @@ body.dashboard > section > h2{
     height:50px;
     background-color:#d62bd0;
 }
-
 .scoreboard > div > div > div > p{
     font-size:3rem;
     color: #FFF;
     text-shadow: 0 0 1rem #000;
     padding:10px 0 0 0;
 }
+
+.scoreboard > ul {
+    position:absolute;
+    top:0;
+    left:0;
+    font-size:1.4rem;
+}
+.scoreboard > ul > li {
+    display:block;
+    height:120px;
+    line-height:120px;
+    border-left:10px solid #df3210;
+    padding:0 0 0 10px;
+}
+
+
 
 .wrapper{
     width: 1000px;
@@ -455,7 +479,10 @@ body.dashboard > section > h2{
 }
 
 
-
+.big_pie, .mid_pie, .small_pie{display:block;margin:0 auto;}
+.small_pie {margin-top:-300px;}
+.mid_pie {margin-top:-490px;}
+.big_pie{margin-top:30px;}
 
 
 
