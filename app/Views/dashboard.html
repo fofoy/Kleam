@@ -10,12 +10,18 @@
             </div>
         </header>
         <section class="wrapper">
+            <?php print_r($infos); ?>
+            <?php //print_r($json); ?>
+            <?php //print_r($lol); ?>
+            <?php echo '<pre>'; print_r($openid); echo '</pre>' ?>
+            <?php print_r($lolo) ?>
+            <?php print_r($_SESSION['lolo']) ?>
             <h2>Hi, Fofoy</h2>
             <img src="public/images/user.jpg" alt="">
             <span>You have played a total of 2 months, 4 weeks, 3 days and 20 hours. <br>Guess what? That’s the time it takes to build a house.</span>
             <ul>
                 <li>2001<p>You joined</p></li>
-                <li>16<p>Games owned</p></li>
+                <li><?php echo $count ?><p>Games owned</p></li>
                 <li>10<p>Played games</p></li>
                 <li>25<p>Friends</p></li>
                 <li>1080<p>Achievements</p></li>
