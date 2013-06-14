@@ -44,7 +44,7 @@ function mapGames(data,biggestPlayed){
 		    		new Kinetic.Circle({
 				    	radius: r,
 				        fill: getRandomColor(),
-				        stroke: 'black',
+				        stroke: 'white',
 				        strokeWidth: 4,
 				        draggable: true,
 				        name: value.gameName,
@@ -88,7 +88,7 @@ function mapFriends(data,biggestScore,playerScore){
 
 		
 		var r = (score/biggestScore)*100;
-		if (r<10){r=10;}
+		if (r<6){r=6;}
 
 		var imageObj = new Image();
 		imageObj.src = value.infos.avatar;
@@ -223,7 +223,7 @@ $.getJSON('public/player.json', function(data) {
 
     $('.dashboard > section > section > h2').text("Hi, "+data.infos.nickname);
     $('.dashboard > section > section > img').attr("src", data.infos.avatar);
-    $('.dashboard > section > section > span').html("You have played a total of "+month+" month(s), "+day+" day(s) and "+hour+" hour(s). <br>Guess what? That’s the time it takes to build a house.");
+    $('.dashboard > section > section > span').html("You have played a total of "+month+" month(s), "+day+" day(s) and "+hour+" hour(s). <br>Guess what? That’s a lot.");
     $('.dashboard > section > section > ul > li:nth-child(1)').html(playerScore+"<p>Points</p>");
     $('.dashboard > section > section > ul > li:nth-child(2)').html(totalGames+"<p>Owned games</p>");
     $('.dashboard > section > section > ul > li:nth-child(3)').html(playedGames+"<p>Played games</p>");

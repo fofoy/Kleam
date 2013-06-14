@@ -389,7 +389,7 @@ body.dashboard > section > h3{
     font-size: 4.8rem;
     font-family: 'geared_slabregular';
     text-transform: uppercase;
-    color: #000;
+    color: #252525;
 }
 
 
@@ -494,8 +494,8 @@ body.dashboard > section > h3{
 .mid_pie {margin-top:-490px;}
 .big_pie{margin-top:60px;}
 
-#map_games {position:absolute;top:0;left:0;background-color:rgba(0,0,0,0.2);}
-#map_friends {position:absolute;top:0;left:0;background-color:rgba(0,0,0,0.2);}
+#map_games {position:absolute;top:0;left:0;background-color:rgba(0,0,0,0.02);}
+#map_friends {position:absolute;top:0;left:0;background-color:rgba(0,0,0,0.02);}
 .details {
     height:;
 }
