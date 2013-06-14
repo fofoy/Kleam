@@ -267,7 +267,7 @@ $.getJSON('public/player.json', function(data) {
 
 
     
-    /* code très sale ne pas regarder */
+    /* code très sale ne pas regarder
     var swidth = 200,
         sheight = 200,
         sradius = Math.min(swidth, sheight) / 2,
@@ -378,6 +378,6 @@ $.getJSON('public/player.json', function(data) {
             $('.'+curr).css('opacity','1');
             $('.player_details').hide();
           });
-    });
+    });*/
 
 });
