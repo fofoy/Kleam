@@ -148,7 +148,8 @@ function mapFriends(data,biggestScore,playerScore){
 
 var classement = [];
 /* DATA */
-$.getJSON('public/player.json', function(data) {
+$.getJSON(steamIdentifier+'.json', function(data) {
+	console.log(data);
 	var playerScore =0;
 	var biggestScore = 0;
 	var totalGames=0;
@@ -231,7 +232,7 @@ $.getJSON('public/player.json', function(data) {
     $('.dashboard > section > section > ul > li:nth-child(5)').html(totalAchievements+"<p>Achievements</p>");
 
 
-    classement.push(data);
+    
 	classement.sort(function(a,b) { return parseFloat(b.score) - parseFloat(a.score) } );
 
 	$('section.scoreboard > div > div:nth-child(2) > p:first-child').text(classement[0].score+" pts");

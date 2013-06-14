@@ -53,14 +53,17 @@ class App_controller{
 
     function dashboard(){
         require('app/Helpers/Library/steam-condenser.php');
-        $steamId = SteamId::create('76561197964139068');
+        //$steamId = SteamId::create('76561197964139068');
+        $id=F3::get('PARAMS.id');
+        $steamId = SteamId::create($id);
         $gamesArray = $steamId->getGames();
         $friendsArray = $steamId->getFriends();
-        F3::set('id',F3::get('SESSION.id'));
+        //F3::set('id',F3::get('SESSION.id'));
         $ajax['infos']['nickname']=$steamId->getNickname();
         $ajax['infos']['avatar']=stripslashes($steamId->getFullAvatarUrl());
         $ajax['games']=array_map(function($item){
-            $steamId = SteamId::create('76561197964139068');
+            $id=F3::get('PARAMS.id');
+            $steamId = SteamId::create($id);
             if($item->shortName=='alienswarm'||$item->shortName=='defensegrid:awakening'||$item->shortName=='l4d'||$item->shortName=='l4d2'||$item->shortName=='portal2'||$item->shortName=='tf2'){
                 return array(
                     'appId'=>$item->appId,
@@ -80,16 +83,25 @@ class App_controller{
             }
         },$gamesArray);
         //$ajax['games']=array_map("array_pop",$ajax['games']);
-        /*$ajax['friends']=array_map(function($item){
-            $steamId = SteamId::create($item->steamId64);
+        $ajax['friends']=array_map(function($item2){
+            //return $item2;
+            $steamId = SteamId::create($item2->steamId64);
             return array(
                 'infos'=>array(
-                    'steamId'=>$item->steamId64,
-                    'nickname'=>$steamId->getNickName(),
-                    'avatar'=>$steamId->getIconAvatarUrl()
+                    'steamId'=>$item2->steamId64,
+                    //'nickname'=>$steamId->getNickName(),
+                    //'avatar'=>$steamId->getIconAvatarUrl()
+                ),
+                'games'=>array(
+                    //'appId'=>$item2->appId,
+                    //'gameName'=>$item2->name,
+                    //'shortName'=>$item2->shortName,
+                    //'playedTime'=>$steamId->getTotalPlaytime($item2->appId),
+                    //'achievements'=>$steamId->getGameStats($item2->shortName)->getAchievementsDone()
                 )
             );
-        },$friendsArray);*/
+        },$friendsArray);
+
         /*$ajax['friends']=array_map(function($item1){
             $steamId=SteamId::create($item1->steamId64);
             return array(
@@ -109,11 +121,13 @@ class App_controller{
         )},$friendsArray);*/
         $json = json_encode($ajax);
 
-        $fp = fopen('results.json', 'w');
+        $fp = fopen(F3::get('PARAMS.id').'.json', 'w');
         fwrite($fp, json_encode($ajax));
         fclose($fp);
 
         F3::set('json',$json);
+        F3::set('friends',$friendsArray);
+        F3::set('isid',F3::get('PARAMS.id'));
         echo Views::instance()->render('dashboard.html');
     }
 
