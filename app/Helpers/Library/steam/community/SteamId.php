@@ -47,7 +47,7 @@ class SteamId extends XMLData {
     /**
      * @var array
      */
-    private $games;
+    public $games;
 
     /**
      * @var bool
@@ -57,7 +57,7 @@ class SteamId extends XMLData {
     /**
      * @var string
      */
-    private $nickname;
+    public $nickname;
 
     /**
      * @var array
@@ -67,7 +67,7 @@ class SteamId extends XMLData {
     /**
      * @var string
      */
-    private $steamId64;
+    public $steamId64;
 
     /**
      * @var string
@@ -158,7 +158,7 @@ class SteamId extends XMLData {
         if(self::isCached($id) && !$bypassCache) {
             $steamId = self::$steamIds[$id];
             if($fetch && !$steamId->isFetched()) {
-                $steamId->fetchMembers();
+                //$steamId->fetchMembers();
             }
 
             return $steamId;
