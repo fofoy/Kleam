@@ -27,7 +27,7 @@ class SteamGame {
     /**
      * @var int
      */
-    private $appId;
+    public $appId;
 
     /**
      * @var string
@@ -37,12 +37,12 @@ class SteamGame {
     /**
      * @var string
      */
-    private $name;
+    public $name;
 
     /**
      * @var string
      */
-    private $shortName;
+    public $shortName;
 
     /**
      * Creates a new or cached instance of the game specified by the given XML
