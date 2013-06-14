@@ -361,7 +361,6 @@ body.dashboard > section > section > section > a + span{
 
 
 body.dashboard > section{
-    margin:150px 0 0 0;
 }
 body.dashboard > section:first-child{
     margin:0;
@@ -379,6 +378,18 @@ body.dashboard > section > h2{
     color: #333333;
     border-bottom:1px solid #999999;
     padding:50px 0 0 0;
+}
+body.dashboard > section > h3{
+    display:block;
+    margin:0 auto;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    width:500px;
+    font-size: 4.8rem;
+    font-family: 'geared_slabregular';
+    text-transform: uppercase;
+    color: #000;
 }
 
 
@@ -477,12 +488,14 @@ body.dashboard > section > h2{
     padding:0 0 0 10px;
 }
 
+
 .big_pie, .mid_pie, .small_pie{display:block;margin:0 auto;}
 .small_pie {margin-top:-300px;}
 .mid_pie {margin-top:-490px;}
 .big_pie{margin-top:60px;}
 
-
+#map_games {position:absolute;top:0;left:0;background-color:rgba(0,0,0,0.2);}
+#map_friends {position:absolute;top:0;left:0;background-color:rgba(0,0,0,0.2);}
 .details {
     height:;
 }
