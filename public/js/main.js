@@ -1,36 +1,105 @@
 $(function(){
 
 $('body > section').css('min-height',$(window).height());
+$('section.scoreboard > div > div > div').height(0);
+$('.player_details').hide();
 
+/* Fixed list players */
 var hPlayers = $('#players').offset().top;
-    function fixDiv() {
-        var $cache = $('#players'); 
-        if ($(window).scrollTop() > hPlayers) 
-            $cache.css({'position': 'fixed', 'top': '0'}); 
-        else
-            $cache.css({'position': 'absolute', 'top': '0'});
-        }
-    $(window).scroll(fixDiv);
-    fixDiv();
-
-    var hScoreboard = $('section.scoreboard').offset().top;
-    function podium(){
-        if ($(window).scrollTop() > hScoreboard - 200) {
-            $('section.scoreboard > div > div:first-child > div').height(70);
-            $('section.scoreboard > div > div:nth-child(2) > div').height(110);
-            $('section.scoreboard > div > div:last-child > div').height(50);
-        }
+function fixDiv() {
+    var $cache = $('#players'); 
+    if ($(window).scrollTop() > hPlayers) 
+        $cache.css({'position': 'fixed', 'top': '0'}); 
+    else
+        $cache.css({'position': 'absolute', 'top': '0'});
     }
-    $(window).scroll(podium);
+$(window).scroll(fixDiv);
+fixDiv();
 
-    $('section.scoreboard > div > div > div').height(0);
-    $('.player_details').hide();
+/* Effect on podium */
+var hScoreboard = $('section.scoreboard').offset().top;
+function podium(){
+    if ($(window).scrollTop() > hScoreboard - 200) {
+        $('section.scoreboard > div > div:first-child > div').height(70);
+        $('section.scoreboard > div > div:nth-child(2) > div').height(110);
+        $('section.scoreboard > div > div:last-child > div').height(50);
+    }
+}
+$(window).scroll(podium);
 
-    $.getJSON('public/player.json', function(data) {
-        $('section > section > h2').text("Hi, "+data.response.players[0].personaname);
-        $('section > section > img').attr("src", data.response.players[0].avatarfull);
-        $('section.scoreboard > div > div > img').attr("src", data.response.players[0].avatarfull);
-    });
+var W = window.innerWidth, H = window.innerHeight;
+mx = W/2;
+my = H/2;
+
+function mapGames(data,biggestPlayed){
+	var circle = [];
+	var i=0;
+	var scene = new Kinetic.Stage({
+	    container: "map",
+	    width: W,
+	    height: H
+	  });
+
+	var calque = new Kinetic.Layer();
+	$.each( data.games, function( key, value ) {
+		if (value.playedTime > 60){
+			var r = (value.playedTime/biggestPlayed)*150;
+			if (r<10){r=10;}
+			circle.push(
+		    		new Kinetic.Circle({
+				    	radius: r,
+				        fill: "red",
+				        stroke: 'black',
+				        strokeWidth: 4,
+				      	x: (Math.random()*(W/2))+(W/4),
+				      	y: (Math.random()*(H/2))+(H/4)
+				   })
+		    	);
+		    
+		    calque.add(circle[i]);
+		    i++;
+		   }
+	});
+
+	scene.add(calque);
+}
+
+
+/* DATA */
+$.getJSON('public/player.json', function(data) {
+	var totalGames=0;
+	var playedTimeTotal = 0;
+	var playedGames = 0;
+	var totalAchievements = 0;
+	var biggestPlayed = 0;
+
+	$.each( data.games, function( key, value ) {
+		totalGames++;
+		playedTimeTotal += value.playedTime;
+		totalAchievements += value.achievements;
+		if (value.playedTime > 60){
+			playedGames++;
+		}
+		if (value.playedTime > biggestPlayed){
+			biggestPlayed = value.playedTime;
+		}
+	});
+
+	mapGames(data,biggestPlayed);
+
+	month = Math.floor(playedTimeTotal/43200);
+	playedTimeTotal = playedTimeTotal - (month*43200);
+	day = Math.floor(playedTimeTotal/1440);
+	playedTimeTotal = playedTimeTotal - (day*1440);
+	hour = Math.floor(playedTimeTotal/60);
+
+    $('.dashboard > section > section > h2').text("Hi, "+data.infos.nickname);
+    $('.dashboard > section > section > img').attr("src", data.infos.avatar);
+    $('.dashboard > section > section > span').html("You have played a total of "+month+" month(s), "+day+" day(s) and "+hour+" hour(s). <br>Guess what? That’s the time it takes to build a house.")
+    $('.dashboard > section > section > ul > li:nth-child(2)').html(totalGames+"<p>Owned games</p>");
+    $('.dashboard > section > section > ul > li:nth-child(3)').html(playedGames+"<p>Played games</p>");
+    $('.dashboard > section > section > ul > li:nth-child(5)').html(totalAchievements+"<p>Achievements</p>");
+});
     /* code très sale ne pas regarder */
     var swidth = 200,
         sheight = 200,
@@ -142,33 +211,5 @@ var hPlayers = $('#players').offset().top;
             $('.player_details').hide();
           });
     });
-
-
-var W = window.innerWidth, H = window.innerHeight;
-
-mx = W/2;
-my = H/2;
-var cubes = [];
-
-var scene = new Kinetic.Stage({
-    container: "map",
-    width: W,
-    height: H
-  });
- 
-var calque = new Kinetic.Layer();
-
-for (var i = 0; i < 20; i++) {
-    	cubes.push(
-    		new Kinetic.Rect({
-		      width: 100,
-		      height: 60,
-		      fill: "blue"
-		   })
-    	);
-    	calque.add(cubes[i]);
-    };
- 
-scene.add(calque);
 
 });
