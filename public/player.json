@@ -1,35 +1,231 @@
 {
     "infos": {
-        "nickname": "fofoy",
-        "avatar": "http:\/\/media.steampowered.com\/steamcommunity\/public\/images\/avatars\/84\/84b5e21a4e51195e8b496e68494c325c455fabdf_full.jpg"
+        "nickname": "SUPERSKULLY",
+        "avatar": "http:\/\/media.steampowered.com\/steamcommunity\/public\/images\/avatars\/d8\/d84b44e323df52a39d066b5438367e9507a4791d_full.jpg"
     },
     "games": {
-        "42680": {
-            "appId": 42680,
-            "gameName": "Call of Duty: Modern Warfare 3",
-            "shortName": "callofdutymodernwarfare3",
-            "playedTime": 1560,
+        "229870": {
+            "appId": 229870,
+            "gameName": "ShootMania Storm",
+            "shortName": null,
+            "playedTime": 8640,
             "achievements": 0
         },
-        "209870": {
-            "appId": 209870,
-            "gameName": "Blacklight: Retribution",
-            "shortName": "blacklightretribution",
+        "226320": {
+            "appId": 226320,
+            "gameName": "Marvel Heroes",
+            "shortName": "marvelheroes",
             "playedTime": 48,
+            "achievements": 0
+        },
+        "57300": {
+            "appId": 57300,
+            "gameName": "Amnesia: The Dark Descent",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "18700": {
+            "appId": 18700,
+            "gameName": "And Yet It Moves",
+            "shortName": "andyetitmoves",
+            "playedTime": 18,
+            "achievements": 0
+        },
+        "91200": {
+            "appId": 91200,
+            "gameName": "Anomaly Warzone Earth",
+            "shortName": "anomalywarzoneearth",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "33910": {
+            "appId": 33910,
+            "gameName": "Arma 2",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "224580": {
+            "appId": 224580,
+            "gameName": "Arma 2: DayZ Mod",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "33930": {
+            "appId": 33930,
+            "gameName": "Arma 2: Operation Arrowhead",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "219540": {
+            "appId": 219540,
+            "gameName": "Arma 2: Operation Arrowhead Beta",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "107100": {
+            "appId": 107100,
+            "gameName": "Bastion",
+            "shortName": "bastion",
+            "playedTime": 24,
+            "achievements": 0
+        },
+        "90530": {
+            "appId": 90530,
+            "gameName": "Battle for Graxia",
+            "shortName": "riseofimmortals",
+            "playedTime": 18,
+            "achievements": 0
+        },
+        "49600": {
+            "appId": 49600,
+            "gameName": "Beat Hazard",
+            "shortName": "beathazard",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "63710": {
+            "appId": 63710,
+            "gameName": "BIT.TRIP RUNNER",
+            "shortName": "bittriprunner",
+            "playedTime": 90,
+            "achievements": 0
+        },
+        "8980": {
+            "appId": 8980,
+            "gameName": "Borderlands",
+            "shortName": "borderlands",
+            "playedTime": 186,
+            "achievements": 0
+        },
+        "49520": {
+            "appId": 49520,
+            "gameName": "Borderlands 2",
+            "shortName": "borderlands2",
+            "playedTime": 3534,
+            "achievements": 0
+        },
+        "217490": {
+            "appId": 217490,
+            "gameName": "Borderlands 2 RU",
+            "shortName": "borderlands2ru",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "65920": {
+            "appId": 65920,
+            "gameName": "Borderlands DLC: Claptrap\u2019s New Robot Revolution",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "40940": {
+            "appId": 40940,
+            "gameName": "Borderlands DLC: Mad Moxxi's Underdome Riot",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "50110": {
+            "appId": 50110,
+            "gameName": "Borderlands DLC: The Secret Armory of General Knoxx",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "8990": {
+            "appId": 8990,
+            "gameName": "Borderlands DLC: The Zombie Island of Dr. Ned",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "26800": {
+            "appId": 26800,
+            "gameName": "Braid",
+            "shortName": "braid",
+            "playedTime": 168,
+            "achievements": 0
+        },
+        "24740": {
+            "appId": 24740,
+            "gameName": "Burnout Paradise: The Ultimate Box",
+            "shortName": null,
+            "playedTime": 300,
             "achievements": 0
         },
         "7940": {
             "appId": 7940,
             "gameName": "Call of Duty 4: Modern Warfare",
             "shortName": "7940",
-            "playedTime": 774,
+            "playedTime": 60,
+            "achievements": 0
+        },
+        "42680": {
+            "appId": 42680,
+            "gameName": "Call of Duty: Modern Warfare 3",
+            "shortName": "callofdutymodernwarfare3",
+            "playedTime": 0,
             "achievements": 0
         },
         "42690": {
             "appId": 42690,
             "gameName": "Call of Duty: Modern Warfare 3 - Multiplayer",
             "shortName": null,
-            "playedTime": 4194,
+            "playedTime": 390,
+            "achievements": 0
+        },
+        "204360": {
+            "appId": 204360,
+            "gameName": "Castle Crashers",
+            "shortName": "204360",
+            "playedTime": 540,
+            "achievements": 0
+        },
+        "200900": {
+            "appId": 200900,
+            "gameName": "Cave Story+",
+            "shortName": "cavestory",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "219640": {
+            "appId": 219640,
+            "gameName": "Chivalry: Medieval Warfare",
+            "shortName": "chivalrymedievalwarfare",
+            "playedTime": 150,
+            "achievements": 0
+        },
+        "232210": {
+            "appId": 232210,
+            "gameName": "Chivalry: Medieval Warfare Beta",
+            "shortName": "232210",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "26500": {
+            "appId": 26500,
+            "gameName": "Cogs",
+            "shortName": "cogs",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "4560": {
+            "appId": 4560,
+            "gameName": "Company of Heroes",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "228200": {
+            "appId": 228200,
+            "gameName": "Company of Heroes (New Steam Version)",
+            "shortName": "companyofheroes",
+            "playedTime": 0,
             "achievements": 0
         },
         "231430": {
@@ -39,33 +235,40 @@
             "playedTime": 0,
             "achievements": 0
         },
+        "9340": {
+            "appId": 9340,
+            "gameName": "Company of Heroes: Opposing Fronts",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "20540": {
+            "appId": 20540,
+            "gameName": "Company of Heroes: Tales of Valor",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
         "10": {
             "appId": 10,
             "gameName": "Counter-Strike",
             "shortName": "10",
-            "playedTime": 73800,
+            "playedTime": 234,
             "achievements": 0
         },
-        "80": {
-            "appId": 80,
-            "gameName": "Counter-Strike: Condition Zero",
-            "shortName": null,
-            "playedTime": 216,
-            "achievements": 0
-        },
-        "100": {
-            "appId": 100,
-            "gameName": "Counter-Strike: Condition Zero Deleted Scenes",
-            "shortName": null,
-            "playedTime": 0,
+        "730": {
+            "appId": 730,
+            "gameName": "Counter-Strike: Global Offensive",
+            "shortName": "csgo",
+            "playedTime": 1236,
             "achievements": 0
         },
         "240": {
             "appId": 240,
             "gameName": "Counter-Strike: Source",
             "shortName": "cs:s",
-            "playedTime": 660,
-            "achievements": 30
+            "playedTime": 12354,
+            "achievements": 0
         },
         "260": {
             "appId": 260,
@@ -74,58 +277,226 @@
             "playedTime": 0,
             "achievements": 0
         },
-        "91310": {
-            "appId": 91310,
-            "gameName": "Dead Island",
-            "shortName": "deadisland",
+        "26900": {
+            "appId": 26900,
+            "gameName": "Crayon Physics Deluxe",
+            "shortName": null,
             "playedTime": 0,
+            "achievements": 0
+        },
+        "2130": {
+            "appId": 2130,
+            "gameName": "Dark Messiah Might and Magic Multi-Player",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "2100": {
+            "appId": 2100,
+            "gameName": "Dark Messiah Might and Magic Single Player",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "50620": {
+            "appId": 50620,
+            "gameName": "Darksiders",
+            "shortName": "darksiders",
+            "playedTime": 18,
+            "achievements": 0
+        },
+        "30": {
+            "appId": 30,
+            "gameName": "Day of Defeat",
+            "shortName": "30",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "300": {
+            "appId": 300,
+            "gameName": "Day of Defeat: Source",
+            "shortName": "dod:s",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "40": {
+            "appId": 40,
+            "gameName": "Deathmatch Classic",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "1520": {
+            "appId": 1520,
+            "gameName": "DEFCON",
+            "shortName": "defcon",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "18500": {
+            "appId": 18500,
+            "gameName": "Defense Grid: The Awakening",
+            "shortName": "defensegrid:awakening",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "219740": {
+            "appId": 219740,
+            "gameName": "Don't Starve",
+            "shortName": null,
+            "playedTime": 318,
             "achievements": 0
         },
         "570": {
             "appId": 570,
             "gameName": "Dota 2",
             "shortName": null,
-            "playedTime": 222,
+            "playedTime": 11028,
             "achievements": 0
         },
-        "6300": {
-            "appId": 6300,
-            "gameName": "Dreamfall: The Longest Journey",
+        "65800": {
+            "appId": 65800,
+            "gameName": "Dungeon Defenders",
+            "shortName": "dungeondefenders",
+            "playedTime": 12,
+            "achievements": 0
+        },
+        "91700": {
+            "appId": 91700,
+            "gameName": "E.Y.E: Divine Cybermancy",
+            "shortName": "eyedivinecybermancy",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "38740": {
+            "appId": 38740,
+            "gameName": "EDGE",
+            "shortName": "edge",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "4000": {
+            "appId": 4000,
+            "gameName": "Garry's Mod",
+            "shortName": "garrysmod",
+            "playedTime": 366,
+            "achievements": 0
+        },
+        "41800": {
+            "appId": 41800,
+            "gameName": "Gratuitous Space Battles",
             "shortName": null,
             "playedTime": 0,
+            "achievements": 0
+        },
+        "70": {
+            "appId": 70,
+            "gameName": "Half-Life",
+            "shortName": "70",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "220": {
+            "appId": 220,
+            "gameName": "Half-Life 2",
+            "shortName": "hl2",
+            "playedTime": 54,
             "achievements": 0
         },
         "320": {
             "appId": 320,
             "gameName": "Half-Life 2: Deathmatch",
             "shortName": "320",
-            "playedTime": 48,
+            "playedTime": 240,
+            "achievements": 0
+        },
+        "380": {
+            "appId": 380,
+            "gameName": "Half-Life 2: Episode One",
+            "shortName": "hl2:ep1",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "420": {
+            "appId": 420,
+            "gameName": "Half-Life 2: Episode Two",
+            "shortName": "hl2:ep2",
+            "playedTime": 0,
             "achievements": 0
         },
         "340": {
             "appId": 340,
             "gameName": "Half-Life 2: Lost Coast",
             "shortName": null,
+            "playedTime": 24,
+            "achievements": 0
+        },
+        "130": {
+            "appId": 130,
+            "gameName": "Half-Life: Blue Shift",
+            "shortName": null,
             "playedTime": 0,
             "achievements": 0
         },
-        "500": {
-            "appId": 500,
-            "gameName": "Left 4 Dead",
-            "shortName": "l4d",
-            "playedTime": 2298,
-            "achievements": 41
+        "50": {
+            "appId": 50,
+            "gameName": "Half-Life: Opposing Force",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "41100": {
+            "appId": 41100,
+            "gameName": "Hammerfight",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "94200": {
+            "appId": 94200,
+            "gameName": "Jamestown",
+            "shortName": "jamestown",
+            "playedTime": 24,
+            "achievements": 0
+        },
+        "1250": {
+            "appId": 1250,
+            "gameName": "Killing Floor",
+            "shortName": "killingfloor",
+            "playedTime": 342,
+            "achievements": 0
+        },
+        "35420": {
+            "appId": 35420,
+            "gameName": "Killing Floor Mod: Defence Alliance 2",
+            "shortName": "35420",
+            "playedTime": 0,
+            "achievements": 0
         },
         "550": {
             "appId": 550,
             "gameName": "Left 4 Dead 2",
             "shortName": "l4d2",
-            "playedTime": 786,
-            "achievements": 18
+            "playedTime": 3288,
+            "achievements": 32
         },
-        "6250": {
-            "appId": 6250,
-            "gameName": "Making History: The Calm & The Storm",
+        "48000": {
+            "appId": 48000,
+            "gameName": "LIMBO",
+            "shortName": "limbo",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "42910": {
+            "appId": 42910,
+            "gameName": "Magicka",
+            "shortName": "magicka",
+            "playedTime": 744,
+            "achievements": 0
+        },
+        "73031": {
+            "appId": 73031,
+            "gameName": "Magicka: Nippon",
             "shortName": null,
             "playedTime": 0,
             "achievements": 0
@@ -137,26 +508,159 @@
             "playedTime": 0,
             "achievements": 0
         },
+        "63200": {
+            "appId": 63200,
+            "gameName": "Monday Night Combat",
+            "shortName": "mondaynightcombat",
+            "playedTime": 648,
+            "achievements": 0
+        },
+        "4920": {
+            "appId": 4920,
+            "gameName": "Natural Selection 2",
+            "shortName": "naturalselection2",
+            "playedTime": 66,
+            "achievements": 0
+        },
+        "99700": {
+            "appId": 99700,
+            "gameName": "NightSky",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "201790": {
+            "appId": 201790,
+            "gameName": "Orcs Must Die! 2",
+            "shortName": "orcsmustdie2",
+            "playedTime": 546,
+            "achievements": 0
+        },
+        "29180": {
+            "appId": 29180,
+            "gameName": "Osmos",
+            "shortName": "osmos",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "39530": {
+            "appId": 39530,
+            "gameName": "Painkiller: Black Edition",
+            "shortName": null,
+            "playedTime": 156,
+            "achievements": 0
+        },
+        "65560": {
+            "appId": 65560,
+            "gameName": "Painkiller: Redemption",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "39560": {
+            "appId": 39560,
+            "gameName": "Painkiller: Resurrection",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "3270": {
+            "appId": 3270,
+            "gameName": "Painkiller Overdose",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "400": {
+            "appId": 400,
+            "gameName": "Portal",
+            "shortName": "portal",
+            "playedTime": 24,
+            "achievements": 0
+        },
+        "620": {
+            "appId": 620,
+            "gameName": "Portal 2",
+            "shortName": "portal2",
+            "playedTime": 258,
+            "achievements": 19
+        },
+        "3830": {
+            "appId": 3830,
+            "gameName": "Psychonauts",
+            "shortName": "psychonauts",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "55110": {
+            "appId": 55110,
+            "gameName": "Red Faction: Armageddon",
+            "shortName": "redfactionarmageddon",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "60": {
+            "appId": 60,
+            "gameName": "Ricochet",
+            "shortName": "60",
+            "playedTime": 24,
+            "achievements": 0
+        },
+        "55230": {
+            "appId": 55230,
+            "gameName": "Saints Row: The Third",
+            "shortName": "saintsrowthethird",
+            "playedTime": 324,
+            "achievements": 0
+        },
+        "6120": {
+            "appId": 6120,
+            "gameName": "Shank",
+            "shortName": "shank",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "3700": {
+            "appId": 3700,
+            "gameName": "Sniper Elite",
+            "shortName": null,
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "63380": {
+            "appId": 63380,
+            "gameName": "Sniper Elite V2",
+            "shortName": "sniperelitev2",
+            "playedTime": 228,
+            "achievements": 0
+        },
         "99900": {
             "appId": 99900,
             "gameName": "Spiral Knights",
             "shortName": "spiralknights",
-            "playedTime": 36,
+            "playedTime": 132,
+            "achievements": 0
+        },
+        "204060": {
+            "appId": 204060,
+            "gameName": "Superbrothers: Sword & Sworcery EP",
+            "shortName": "superbrothersswordampsworceryep",
+            "playedTime": 0,
             "achievements": 0
         },
         "40800": {
             "appId": 40800,
             "gameName": "Super Meat Boy",
             "shortName": "supermeatboy",
-            "playedTime": 24,
+            "playedTime": 66,
             "achievements": 0
         },
         "440": {
             "appId": 440,
             "gameName": "Team Fortress 2",
             "shortName": "tf2",
-            "playedTime": 15660,
-            "achievements": 139
+            "playedTime": 25632,
+            "achievements": 276
         },
         "520": {
             "appId": 520,
@@ -165,17 +669,45 @@
             "playedTime": 0,
             "achievements": 0
         },
+        "20": {
+            "appId": 20,
+            "gameName": "Team Fortress Classic",
+            "shortName": "20",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "105600": {
+            "appId": 105600,
+            "gameName": "Terraria",
+            "shortName": null,
+            "playedTime": 6222,
+            "achievements": 0
+        },
         "113200": {
             "appId": 113200,
             "gameName": "The Binding of Isaac",
             "shortName": "bindingofisaac",
-            "playedTime": 1584,
+            "playedTime": 4512,
             "achievements": 0
         },
-        "6310": {
-            "appId": 6310,
-            "gameName": "The Longest Journey",
-            "shortName": null,
+        "72850": {
+            "appId": 72850,
+            "gameName": "The Elder Scrolls V: Skyrim",
+            "shortName": "theelderscrollsvskyrim",
+            "playedTime": 1434,
+            "achievements": 0
+        },
+        "43190": {
+            "appId": 43190,
+            "gameName": "The Haunted: Hells Reach",
+            "shortName": "thehauntedhellsreach",
+            "playedTime": 582,
+            "achievements": 0
+        },
+        "67000": {
+            "appId": 67000,
+            "gameName": "The Polynomial",
+            "shortName": "thepolynomial",
             "playedTime": 0,
             "achievements": 0
         },
@@ -186,10 +718,66 @@
             "playedTime": 0,
             "achievements": 0
         },
+        "4550": {
+            "appId": 4550,
+            "gameName": "Titan Quest: Immortal Throne",
+            "shortName": null,
+            "playedTime": 300,
+            "achievements": 0
+        },
+        "38700": {
+            "appId": 38700,
+            "gameName": "Toki Tori",
+            "shortName": "tokitori",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "17080": {
+            "appId": 17080,
+            "gameName": "Tribes: Ascend",
+            "shortName": null,
+            "playedTime": 72,
+            "achievements": 0
+        },
+        "35700": {
+            "appId": 35700,
+            "gameName": "Trine",
+            "shortName": "trine",
+            "playedTime": 30,
+            "achievements": 0
+        },
+        "70300": {
+            "appId": 70300,
+            "gameName": "VVVVVV",
+            "shortName": null,
+            "playedTime": 24,
+            "achievements": 0
+        },
         "4570": {
             "appId": 4570,
             "gameName": "Warhammer 40,000: Dawn of War - Game of the Year Edition",
             "shortName": "4570",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "4580": {
+            "appId": 4580,
+            "gameName": "Warhammer 40,000: Dawn of War \u2013 Dark Crusade",
+            "shortName": "4580",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "9310": {
+            "appId": 9310,
+            "gameName": "Warhammer 40,000: Dawn of War \u2013 Winter Assault",
+            "shortName": "9310",
+            "playedTime": 0,
+            "achievements": 0
+        },
+        "22000": {
+            "appId": 22000,
+            "gameName": "World of Goo",
+            "shortName": "worldofgoo",
             "playedTime": 0,
             "achievements": 0
         },
@@ -200,13 +788,228 @@
             "playedTime": 0,
             "achievements": 0
         },
-        "70660": {
-            "appId": 70660,
-            "gameName": "Worms Pinball",
-            "shortName": null,
-            "playedTime": 0,
+        "70600": {
+            "appId": 70600,
+            "gameName": "Worms Ultimate Mayhem",
+            "shortName": "wormsultimatemayhem",
+            "playedTime": 534,
             "achievements": 0
         }
     },
-    "friends": []
+    "friends": {
+    	"fofoy" : {
+"infos": {
+"nickname": "fofoy",
+"avatar": "http:\/\/media.steampowered.com\/steamcommunity\/public\/images\/avatars\/84\/84b5e21a4e51195e8b496e68494c325c455fabdf_full.jpg"
+},
+"games": {
+"42680": {
+"appId": 42680,
+"gameName": "Call of Duty: Modern Warfare 3",
+"shortName": "callofdutymodernwarfare3",
+"playedTime": 1560,
+"achievements": 0
+},
+"209870": {
+"appId": 209870,
+"gameName": "Blacklight: Retribution",
+"shortName": "blacklightretribution",
+"playedTime": 48,
+"achievements": 0
+},
+"7940": {
+"appId": 7940,
+"gameName": "Call of Duty 4: Modern Warfare",
+"shortName": "7940",
+"playedTime": 774,
+"achievements": 0
+},
+"42690": {
+"appId": 42690,
+"gameName": "Call of Duty: Modern Warfare 3 - Multiplayer",
+"shortName": null,
+"playedTime": 4194,
+"achievements": 0
+},
+"231430": {
+"appId": 231430,
+"gameName": "Company of Heroes 2 \u2013 OPEN BETA",
+"shortName": "231430",
+"playedTime": 0,
+"achievements": 0
+},
+"10": {
+"appId": 10,
+"gameName": "Counter-Strike",
+"shortName": "10",
+"playedTime": 73800,
+"achievements": 0
+},
+"80": {
+"appId": 80,
+"gameName": "Counter-Strike: Condition Zero",
+"shortName": null,
+"playedTime": 216,
+"achievements": 0
+},
+"100": {
+"appId": 100,
+"gameName": "Counter-Strike: Condition Zero Deleted Scenes",
+"shortName": null,
+"playedTime": 0,
+"achievements": 0
+},
+"240": {
+"appId": 240,
+"gameName": "Counter-Strike: Source",
+"shortName": "cs:s",
+"playedTime": 660,
+"achievements": 30
+},
+"260": {
+"appId": 260,
+"gameName": "Counter-Strike: Source Beta",
+"shortName": "cs:sbeta",
+"playedTime": 0,
+"achievements": 0
+},
+"91310": {
+"appId": 91310,
+"gameName": "Dead Island",
+"shortName": "deadisland",
+"playedTime": 0,
+"achievements": 0
+},
+"570": {
+"appId": 570,
+"gameName": "Dota 2",
+"shortName": null,
+"playedTime": 222,
+"achievements": 0
+},
+"6300": {
+"appId": 6300,
+"gameName": "Dreamfall: The Longest Journey",
+"shortName": null,
+"playedTime": 0,
+"achievements": 0
+},
+"320": {
+"appId": 320,
+"gameName": "Half-Life 2: Deathmatch",
+"shortName": "320",
+"playedTime": 48,
+"achievements": 0
+},
+"340": {
+"appId": 340,
+"gameName": "Half-Life 2: Lost Coast",
+"shortName": null,
+"playedTime": 0,
+"achievements": 0
+},
+"500": {
+"appId": 500,
+"gameName": "Left 4 Dead",
+"shortName": "l4d",
+"playedTime": 2298,
+"achievements": 41
+},
+"550": {
+"appId": 550,
+"gameName": "Left 4 Dead 2",
+"shortName": "l4d2",
+"playedTime": 786,
+"achievements": 18
+},
+"6250": {
+"appId": 6250,
+"gameName": "Making History: The Calm & The Storm",
+"shortName": null,
+"playedTime": 0,
+"achievements": 0
+},
+"43110": {
+"appId": 43110,
+"gameName": "Metro 2033",
+"shortName": "metro2033",
+"playedTime": 0,
+"achievements": 0
+},
+"99900": {
+"appId": 99900,
+"gameName": "Spiral Knights",
+"shortName": "spiralknights",
+"playedTime": 36,
+"achievements": 0
+},
+"40800": {
+"appId": 40800,
+"gameName": "Super Meat Boy",
+"shortName": "supermeatboy",
+"playedTime": 24,
+"achievements": 0
+},
+"440": {
+"appId": 440,
+"gameName": "Team Fortress 2",
+"shortName": "tf2",
+"playedTime": 15660,
+"achievements": 139
+},
+"520": {
+"appId": 520,
+"gameName": "Team Fortress 2 Beta",
+"shortName": "520",
+"playedTime": 0,
+"achievements": 0
+},
+"113200": {
+"appId": 113200,
+"gameName": "The Binding of Isaac",
+"shortName": "bindingofisaac",
+"playedTime": 1584,
+"achievements": 0
+},
+"6310": {
+"appId": 6310,
+"gameName": "The Longest Journey",
+"shortName": null,
+"playedTime": 0,
+"achievements": 0
+},
+"4540": {
+"appId": 4540,
+"gameName": "Titan Quest",
+"shortName": null,
+"playedTime": 0,
+"achievements": 0
+},
+"4570": {
+"appId": 4570,
+"gameName": "Warhammer 40,000: Dawn of War - Game of the Year Edition",
+"shortName": "4570",
+"playedTime": 0,
+"achievements": 0
+},
+"70620": {
+"appId": 70620,
+"gameName": "Worms Crazy Golf",
+"shortName": "70620",
+"playedTime": 0,
+"achievements": 0
+},
+"70660": {
+"appId": 70660,
+"gameName": "Worms Pinball",
+"shortName": null,
+"playedTime": 0,
+"achievements": 0
 }
+},
+"friends": []
+}
+    }
+}
+
+
